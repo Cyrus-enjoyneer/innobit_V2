@@ -18,7 +18,6 @@
         "_locales/en/innobit-jsdoc-strings.json",
         "_locales/zh-CN/innobit-strings.json",
         "_locales/zh-CN/innobit-jsdoc-strings.json"
-        
     ],
     "testFiles": [
         "test.ts"
@@ -31,6 +30,6 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj",
+    "preferredEditor": "blocksprj",
     "icon": "icon.png"
 }
