@@ -611,7 +611,7 @@ namespace innobit {
      */
     //% subcategory="Sonar"
     //% blockId="distance_CM" weight=79 blockGap=15
-    //% block="distance (cm)"
+    //% block="distance (CM)"
 
     export function distanceCM(): number {
         // send pulse
@@ -631,7 +631,7 @@ namespace innobit {
 
     //% subcategory="Sonar"
     //% blockId="distance_Inch" weight=79 blockGap=15
-    //% block="distance (inch)"
+    //% block="distance (Inch)"
 
     export function distanceInch(): number {
         // send pulse

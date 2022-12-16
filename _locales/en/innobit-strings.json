@@ -23,6 +23,8 @@
   "innobit.readPIR|block": "PIR",
   "innobit.Fan_M2|block": "Set Fan M2 speed to %speed percent|",
   "innobit.Fan_M1|block": "Set Fan M1 speed to %speed percent|",
+  "innobit.distance_CM|block": "distance (cm) ",
+  "innobit.distance_Inch|block": "distance (inch)",
   "innobit|block": "innobit",
   "{id:category}innobit": "Innobit",
   "{id:group}Positional": "Positional",
@@ -31,5 +33,6 @@
   "{id:subcategory}Servo": "Servo",
   "{id:subcategory}Temperature and Humidity Sensor": "Temperature and Humidity Sensor",
   "{id:subcategory}Electric Fan": "Electric Fan",
-  "{id:subcategory}SPIR sensor": "SPIR sensor"
+  "{id:subcategory}SPIR sensor": "SPIR sensor",
+  "{id:subcategory}Sonar": "Sonar"
 }
