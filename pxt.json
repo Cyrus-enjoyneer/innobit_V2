@@ -1,0 +1,35 @@
+{
+    "name": "innobit",
+    "description": "This is the extension for innobit.",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.2"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "innobit.ts",
+        "_locales/en/innobit-strings.json",
+        "_locales/en/innobit-jsdoc-strings.json",
+        "_locales/zh-CN/innobit-strings.json",
+        "_locales/zh-CN/innobit-jsdoc-strings.json",
+        "_locales/zh-TW/innobit-strings.json",
+        "_locales/zh-TW/innobit-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "5.0.12",
+        "pxt": "8.0.7",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj",
+    "icon": "Icon.jpeg"
+}
