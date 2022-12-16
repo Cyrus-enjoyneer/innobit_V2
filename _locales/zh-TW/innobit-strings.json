@@ -23,6 +23,8 @@
   "innobit.Fan_M22|block": "人體紅外線值",
   "innobit.Fan_M2|block": "電風扇M2 功率%speed percent ",
   "innobit.Fan_M1|block": "電風扇M1 功率%speed percent ",
+  "innobit.distance_CM|block": "距離 (厘米) ",
+  "innobit.distance_Inch|block": "距離 (吋) ",
   "innobit|block": "innobit",
   "{id:category}innobit": "Innobit",
   "{id:group}Positional": "Positional",
@@ -31,6 +33,6 @@
   "{id:subcategory}Servo": "伺服馬達",
   "{id:subcategory}Temperature and Humidity Sensor": "溫濕感應器",
   "{id:subcategory}Electric Fan": "風扇",
-  "{id:subcategory}SPIR sensor": "人體紅外線"
-
+  "{id:subcategory}SPIR sensor": "人體紅外線",
+  "{id:subcategory}Sonar": "超聲波感應器"
 }
