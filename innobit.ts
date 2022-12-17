@@ -560,10 +560,10 @@ namespace innobit {
      */
    
     //% help=pins/digital-read-pin 
-    //% blockId="Fan_M22" weight=12 blockGap=17
+    //% blockId="PIRvalue" weight=12 blockGap=17
     //% block="PIR value|"
     //% subcategory="SPIR sensor"
-    export function Fan_M22(): number {
+    export function PIRvalue(): number {
         pins.digitalWritePin(DigitalPin.P0, 0);
         return pins.digitalReadPin(DigitalPin.P0);
     }
@@ -609,10 +609,10 @@ namespace innobit {
      * @param unit desired conversion unit. eg: YFPingUnit.Centimeters
      * @param maxCmDistance maximum distance in centimeters (default is 450)
      */
+    
     //% subcategory="Sonar"
-    //% blockId="distance_CM" weight=79 blockGap=15
+    //% blockId="distanceCM" weight=12 blockGap=20
     //% block="distance (cm)"
-
     export function distanceCM(): number {
         // send pulse
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
@@ -625,14 +625,11 @@ namespace innobit {
         // read pulse
         const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
         return Math.idiv(d, 58);
-        
     }
 
-
     //% subcategory="Sonar"
-    //% blockId="distance_Inch" weight=79 blockGap=15
+    //% blockId="distanceInch" weight=12 blockGap=15
     //% block="distance (inch)"
-
     export function distanceInch(): number {
         // send pulse
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone);
@@ -645,9 +642,8 @@ namespace innobit {
         // read pulse
         const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
         return Math.idiv(d, 148);
-
     }
-
+    
 
 
 
