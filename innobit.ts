@@ -150,6 +150,8 @@ namespace innobit {
     let _temptype: tempType = tempType.celsius
     let _readSuccessful: boolean = false
     let _sensorrespondingtempType: boolean = false
+    let defaultTemperature: number = 25
+    let defaultHumidity: number = 55
 
 
 
@@ -161,7 +163,9 @@ namespace innobit {
     //% blockId="readTemperature" weight=12 blockGap=15
     //% block="Temperature"
     export function readTemperature(): number {
+       
         return readData(dataType.temperature)
+        
     }
 
     /**
@@ -242,6 +246,20 @@ namespace innobit {
                     _temperature = _temperature * 9 / 5 + 32
             }
         }
+        if (_temperature == 0) {
+            _temperature = defaultTemperature
+        }else{
+            defaultTemperature = _temperature
+        }
+        _temperature = Math.floor(_temperature)
+        
+        if (_humidity == 0) {
+            _humidity = defaultHumidity
+        } else {
+            defaultHumidity = _humidity
+        }
+        _humidity = Math.floor(_humidity)
+        
         return data == dataType.humidity ? _humidity : _temperature
     }
 
@@ -555,7 +573,7 @@ namespace innobit {
     ///////////////////// 热释电模块 ///////////////////////
 
     /**
-     * Read the specified pin or connector as either 0 or 1
+     * Read the specified pin or connector as 0 
      * @param name pin to read from, eg: DigitalPin.P0
      */
    
@@ -604,10 +622,9 @@ namespace innobit {
     ///////////////////// Input Sonar Sensors ///////////////////////
     /**
      * Send a ping and get the echo time (in microseconds) as a result
-     * @param trig trigger pin. eg: DigitalPin.P2
-     * @param echo echo pin. eg: DigitalPin.P8
-     * @param unit desired conversion unit. eg: YFPingUnit.Centimeters
-     * @param maxCmDistance maximum distance in centimeters (default is 450)
+        *trigger pin is DigitalPin.P0
+        *echo pin is DigitalPin.P8
+     *  maximum distance in centimeters (default is 450)
      */
     
     //% subcategory="Sonar"
@@ -626,6 +643,14 @@ namespace innobit {
         const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
         return Math.idiv(d, 58);
     }
+
+
+    /**
+        * Send a ping and get the echo time (in microseconds) as a result
+        *trigger pin is DigitalPin.P0
+        *echo pin is DigitalPin.P8
+        *maximum distance in Inch (default is 450)
+        */
 
     //% subcategory="Sonar"
     //% blockId="distanceInch" weight=12 blockGap=15

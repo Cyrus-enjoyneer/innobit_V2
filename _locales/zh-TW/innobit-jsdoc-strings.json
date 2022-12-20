@@ -8,6 +8,6 @@
   "innobit.motor_M1": "初始化馬達  M1\r\n 設置馬達的速度 (-255 to 255)",
   "innobit.motor_M2": "初始化馬達  M2\r\n 設置馬達的速度 (0 to 255)",
   "innobit.readData": "通過DHT11取得濕溫度",
-  "innobit.readhumidity": "通過DHT11取得濕度",
-  "innobit.readtemperature": "通過DHT11取得溫度"
+  "innobit.readHumidity": "通過DHT11取得濕度",
+  "innobit.readHemperature": "通過DHT11取得溫度"
 }
