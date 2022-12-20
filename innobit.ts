@@ -573,8 +573,8 @@ namespace innobit {
     ///////////////////// 热释电模块 ///////////////////////
 
     /**
-     * Read the specified pin or connector as 0 
-     * @param name pin to read from, eg: DigitalPin.P0
+     * Read the pin0, the result will be either 0 or 1
+     * 1 means someone is passing through
      */
    
     //% help=pins/digital-read-pin 
