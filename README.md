@@ -1,34 +1,108 @@
+# innobit
+![](icon.png)
 
-> 在 [https://antluun.github.io/module1/](https://antluun.github.io/module1/) 打開此頁面
+## Feature
 
-## A link to the Steamfun product page
-* http://www.steamfun.co.uk/shop
+* This extension is designed to programme and drive the moudule series innobit for micro:bit, which aim at supporting the coding and programming self-learning kits for beginers, "The future city". You can get [The future city from SteamFun](http://www.steamfun.co.uk/shop)
 
-## 作為擴充功能使用
+1. The module adopts a high-quality plastic shell structure. Combining with lego in the kits, you can make projects by following the subjects in the kits or on your own design.
 
-可以在 MakeCode 中將此儲存庫新增為**擴充功能**。
+2. There are 2 motor ports, 1 input and 1 output port on the innobit, so that children can connect the wire easily and correctly.
 
-* 開啟 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 按一下**新專案**
-* 按一下工具齒輪選單下的**擴充功能**
-* 搜索 **https://github.com/antluun/module1** 並匯出
+3. A variety of sensors are included, motors and electric fans for the motor ports, PIR sensor, sonar sensor and humidity and temperature sensor for the input port and the servo and the LED for the output port.
 
-## 編輯此專案 ![建立狀態徽章](https://github.com/antluun/module1/workflows/MakeCode/badge.svg)
+4. The future city is still developing, more sensors may be added later.
 
-編輯 MakeCode 中的儲存庫。
+## Basic usage
 
-* 開啟 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 按一下**匯入**，然後按一下**匯入 URL**
-* 貼上 **https://github.com/antluun/module1** 並按一下匯入
+* Turn on and off the motor on port M1 and M2 
 
-## 預覽程式積木
+```blocks
 
-此影像顯示了主分支中最後一次提交的方塊程式碼。
-此影像可能需要幾分鐘的時間重新整理。
+input.onButtonPressed(Button.A, function () {
+    innobit.motor_M1(255)
+    innobit.motor_M2(255)
+})
+input.onButtonPressed(Button.B, function () {
+    innobit.motor_M1(0)
+    innobit.motor_M2(0)
+})
 
-![各個程式積木渲染後的視圖](https://github.com/antluun/module1/raw/master/.github/makecode/blocks.png)
+```
+---
 
-#### 中繼資料 (用於搜索、渲染)
+* Temperature and humidity data will be displayed on micro:bit
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(innobit.readTemperature())
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(innobit.readHumidity())
+})
+
+```
+---
+
+* Turn on the lights
+```blocks
+input.onButtonPressed(Button.A, function () {
+    innobit.LED_setPixelColor3(innobit.colors(NeoPixelColors.Red), innobit.colors(NeoPixelColors.Yellow), innobit.colors(NeoPixelColors.Green))
+})
+```
+---
+
+* Turn the servo to different angles
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    innobit.createServo(90)
+})
+input.onButtonPressed(Button.B, function () {
+    innobit.createServo(0)
+})
+```
+---
+* When people pass through the PIR sensor, the PIRvalue equal to 1
+```blocks
+basic.forever(function () {
+    if (innobit.PIRvalue() == 1) {
+        basic.showIcon(IconNames.StickFigure)
+    } else if (innobit.PIRvalue() == 0) {
+        basic.clearScreen()
+    }
+})
+```
+---
+
+* Turn on and off the electric fan, the maximum power of the fann is 100 percent
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    innobit.fan_M1(100)
+})
+input.onButtonPressed(Button.B, function () {
+    innobit.fan_M1(0)
+})
+```
+---
+
+* The distance between the nearest object and the sonar sensor will be displayed on the micro:bit
+```blocks
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(innobit.distanceInch())
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(innobit.distanceCM())
+})
+
+```
+---
+
+## License
+
+MIT
+
+## Supported targets
 
 * for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
