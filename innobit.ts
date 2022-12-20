@@ -160,7 +160,7 @@ namespace innobit {
     //% subcategory="Temperature and Humidity Sensor"
     //% blockId="readtemperature" weight=12 blockGap=15
     //% block="Temperature"
-    export function readtemperature(): number {
+    export function readTemperature(): number {
         return readData(dataType.temperature)
     }
 
@@ -170,7 +170,7 @@ namespace innobit {
     //% subcategory="Temperature and Humidity Sensor"
     //% blockId="readhumidity" weight=12 blockGap=15
     //% block="Humidity"
-    export function readhumidity(): number {
+    export function readHumidity(): number {
         return readData(dataType.humidity)
     }
 
@@ -582,7 +582,7 @@ namespace innobit {
     //% block="Electric Fan M2 speed %speed percent|"
     //% speed.min=0 speed.max=100
     //% subcategory="Electric Fan"
-    export function Fan_M2(speed: number) {
+    export function fan_M2(speed: number) {
         motorRun(MPMotors.M2, MPDir.Forward, speed * 2.55)
     }
 
@@ -596,7 +596,7 @@ namespace innobit {
     //% block="Electric Fan M1 speed %speed percent|"
     //% speed.min=0 speed.max=100
     //% subcategory="Electric Fan"
-    export function Fan_M1(speed: number) {
+    export function fan_M1(speed: number) {
         motorRun(MPMotors.M1, MPDir.Forward, speed * 2.55)
    }
 
