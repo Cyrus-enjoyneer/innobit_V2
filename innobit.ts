@@ -158,7 +158,7 @@ namespace innobit {
         *  通过DHT11获取温度
         */
     //% subcategory="Temperature and Humidity Sensor"
-    //% blockId="readtemperature" weight=12 blockGap=15
+    //% blockId="readTemperature" weight=12 blockGap=15
     //% block="Temperature"
     export function readTemperature(): number {
         return readData(dataType.temperature)
@@ -168,7 +168,7 @@ namespace innobit {
         *  通过DHT11获取湿度
         */
     //% subcategory="Temperature and Humidity Sensor"
-    //% blockId="readhumidity" weight=12 blockGap=15
+    //% blockId="readHumidity" weight=12 blockGap=15
     //% block="Humidity"
     export function readHumidity(): number {
         return readData(dataType.humidity)
@@ -578,7 +578,7 @@ namespace innobit {
         *  Set Electric Fan speed M2
         * @param set Electric Fan speed (0 to 100)
         */
-    //% blockId="Fan_M2" weight=12 blockGap=17
+    //% blockId="fan_M2" weight=12 blockGap=17
     //% block="Electric Fan M2 speed %speed percent|"
     //% speed.min=0 speed.max=100
     //% subcategory="Electric Fan"
@@ -592,7 +592,7 @@ namespace innobit {
         *  Set Electric Fan speed M1
         * @param set Electric Fan speed (0 to 100)
         */
-    //% blockId="Fan_M1" weight=15 blockGap=15
+    //% blockId="fan_M1" weight=15 blockGap=15
     //% block="Electric Fan M1 speed %speed percent|"
     //% speed.min=0 speed.max=100
     //% subcategory="Electric Fan"

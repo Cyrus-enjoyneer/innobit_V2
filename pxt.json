@@ -17,7 +17,8 @@
         "_locales/en/innobit-strings.json",
         "_locales/en/innobit-jsdoc-strings.json",
         "_locales/zh-CN/innobit-strings.json",
-        "_locales/zh-CN/innobit-jsdoc-strings.json"
+        "_locales/zh-CN/innobit-jsdoc-strings.json",
+        "main.py"
     ],
     "testFiles": [
         "test.ts"
