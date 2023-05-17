@@ -25,6 +25,7 @@
   "innobit.fan_M1|block": "電風扇M1 功率%speed percent ",
   "innobit.distanceCM|block": "距離 (厘米) ",
   "innobit.distanceInch|block": "距離 (吋) ",
+  "innobit.Raindrop|block": "感應到雨水?",
   "innobit|block": "innobit",
   "{id:category}innobit": "Innobit",
   "{id:group}Positional": "Positional",
@@ -34,5 +35,6 @@
   "{id:subcategory}Temperature and Humidity Sensor": "溫濕感應器",
   "{id:subcategory}Electric Fan": "風扇",
   "{id:subcategory}SPIR sensor": "人體紅外線",
-  "{id:subcategory}Sonar": "超聲波感應器"
+  "{id:subcategory}Sonar": "超聲波感應器",
+  "{id:subcategory}Raindrop sensor": "雨滴感應器"
 }

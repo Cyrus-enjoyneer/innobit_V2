@@ -668,6 +668,18 @@ namespace innobit {
         const d = pins.pulseIn(DigitalPin.P0, PulseValue.High, 450 * 58);
         return Math.idiv(d, 148);
     }
+
+    //% subcategory="Raindrop sensor"
+    //% blockId=isRaindrop
+    //% block="is water detected?"
+    //%  weight=90
+    export function Raindrop(): boolean {
+        if(pins.analogReadPin(AnalogPin.P0) > 500){
+            return true
+        }else{
+            return false
+        }
+    }
     
 
 
